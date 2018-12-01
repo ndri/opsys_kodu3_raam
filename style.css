@@ -1,0 +1,21 @@
+body {
+    font-family: sans-serif;
+}
+
+#tabel {
+    border-collapse: collapse;
+    table-layout: fixed;
+    font-size: 0.6em;
+}
+#tabel td {
+    padding: 4px;
+    text-align: center;
+}
+#tabel tbody td {
+    border: 1px solid black;
+}
+
+#endaoma {
+    font-size: 1em;
+    padding: 0;
+}

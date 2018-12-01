@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kolmas kodutöö</title>
+        <meta charset="UTF-8">
+        <link type="text/css" rel="stylesheet" href="style.css" />
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <main>
+            <h1>Kolmas kodutöö</h1>
+            <p>Vali või sisesta järjend (kujul 1,10,4,2,12,3,13,2)</p>
+            <form>
+                <input type="radio" name="järjend" value="2,5,13,29,7,1,18,40,49,4"> 2,5,13,29,7,1,18,40,49,4<br>
+                <input type="radio" name="järjend" value="1,10,44,2,12,3,13,20" checked> 1,10,44,2,12,3,13,20<br>
+                <input type="radio" name="järjend" value="45,6,16,9,33,28,11,37,49,25"> 45,6,16,9,33,28,11,37,49,25<br>
+                <input type="radio" name="järjend" value="">
+                <input id="endaoma" type="text" size="30" placeholder="Enda oma"><br>
+                <p>Algoritmi käivitamiseks klõpsa nupule:</p>
+                <button type="button" onclick="vajutus('FCFS')">FCFS</button>
+                <button type="button" onclick="vajutus('SSTF')">SSTF</button>
+                <button type="button" onclick="vajutus('SCAN')">SCAN</button>
+                <button type="button" onclick="vajutus('LOOK')">LOOK</button>
+            </form>
+            <h2 id="pealkiri"></h2>
+            <table id="tabel">
+                <thead></thead>
+                <tbody></tbody>
+            </table>
+            <canvas id="lõuend"></canvas>
+            <p>Summaarne teepikkus: <span id="teepikkus"></span></p>
+        </main>
+    </body>
+</html>
