@@ -110,11 +110,8 @@ function vajutus(algoritm) {
     // nt "5,19,4,2,20,25,12" => [5, 19, 4, 20, 20, 25, 12]
     järjend = järjend.split(",").map(i => Number(i));
 
-    // Kui algne positsioon on testmustris, tuleb see kõigepealt ära teha, v.a. FCFS puhul.
-    // Ehk lisame FCFS puhul 10 kohe järjendi algusesse
-    if (algoritm === "FCFS") {
-        järjend.unshift(algus);
-    }
+    // Lisame  10 kohe järjendi algusesse
+    järjend.unshift(algus);
 
     uusTabel(järjend);
     paneTeepikkus("Sa unustasid algoritmis seda määrata");
