@@ -3,8 +3,8 @@ const vahe = 20; // Punktide vertikaalne vahe pikslites
 const raadius = 4; // Punktide raadius pikslites
 
 // Globaalsed muutujad
-var positsioon = algus; // Eelmise punkti asukoht
-var punkte = 0; // Punktide kogus
+let positsioon = algus; // Eelmise punkti asukoht
+let punkte = 0; // Punktide kogus
 
 // Käivitatakse siis, kui lehekülg laaditakse
 const main = function () {
@@ -18,17 +18,8 @@ const main = function () {
     // Teeme lõuendi tabelilaiuseks
     lõuend.width = tabel.offsetWidth;
     // Teeme lõuendi piisavalt kõrgeks
-    // 10 elementi on max, üles ja alla ka vahe, seega 12
+    // 10 vahet on max, üles ja alla ka vahe, seega 12
     lõuend.height = 12 * vahe;
-
-    // Väike näide, kustuta pärast ära
-    uusTabel([10, 4, 20, 13, 37]); // see tehakse nupuvajutusel automaatselt tegelt
-    joonistaPunkt(10);
-    joonistaPunkt(4);
-    joonistaPunkt(20);
-    joonistaPunkt(13);
-    joonistaPunkt(37);
-    paneTeepikkus(53);
 };
 window.addEventListener("load", main);
 
@@ -110,8 +101,9 @@ function vajutus(algoritm) {
     // nt "5,19,4,2,20,25,12" => [5, 19, 4, 20, 20, 25, 12]
     järjend = järjend.split(",").map(i => Number(i));
 
-    // Lisame  10 kohe järjendi algusesse
-    järjend.unshift(algus);
+    // Lisame FCFS puhul 10 kohe järjendi algusesse
+    //järjend.unshift(algus);
+    // Tegelt ärme lisa sest nende järgi pannakse x-id
 
     uusTabel(järjend);
     paneTeepikkus("Sa unustasid algoritmis seda määrata");
