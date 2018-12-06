@@ -20,6 +20,15 @@ const main = function () {
     // Teeme lõuendi piisavalt kõrgeks
     // 10 vahet on max, üles ja alla ka vahe, seega 12
     lõuend.height = 12 * vahe;
+
+    // Väike näide, kustuta pärast ära
+    uusTabel([10, 4, 20, 13, 37]); // see tehakse nupuvajutusel automaatselt tegelt
+    joonistaPunkt(10);
+    joonistaPunkt(4);
+    joonistaPunkt(20);
+    joonistaPunkt(13);
+    joonistaPunkt(37);
+    paneTeepikkus(53);
 };
 window.addEventListener("load", main);
 
